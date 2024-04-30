@@ -3,19 +3,22 @@
 Link to preprint: https://arxiv.org/abs/2403.14927
 
 ## What is Included
-- `scripts/`: Python scripts used for data cleaning, open-coding, reconciliation, and data analysis
+- `scripts/`: Python scripts used for data cleaning, open coding, reconciliation, and data analysis
 - `figures/`: Aggregate plots of survey data (broken down at the role-level)
 - `interview_protocol.pdf`: The protocol followed for follow-up interviews
 - `glossary.json`: Glossary of codes and definitions (per question) resulting from open-coding
 - `survey_questions.pdf`: A PDF of the full survey text (including questions), as seen by participants, produced by Qualtrics
 - `questions.json`: A JSON of questions, in short form, and their associated IDs
+- `image_attributions.png`: Lists the author and their URL for each icon used in the paper
 
 ## What is Not Included
 In order to follow our approved research protocol and preserve our survey participants' anonymity, individual responses are not included in this replication package. The nature of the responses we received means that even redacted responses could reveal the identities of individual participants.
 
-NOTE: This means that the scripts may not run out of the box.  They require data files in order to function properly.
+IMPORTANT NOTE: This means that the scripts included in this repository *will not run* as provided. The data files that they require in order to function properly are not included in this repository.
 
 ## Installation
+
+As the raw survey data is not included in this repository, most scripts will not run. However, we include information on installation requirements and details on the scripts' functionality to provide insight into our process and provide a scaffold for future work.
 
 In order to run the data cleaning and analysis tools, the following libraries will need to be installed.
 
@@ -32,7 +35,7 @@ The `figures` folder contains plots showing aggregated results from each questio
 
 ### Scripts 
 
-The `scripts` folder contains the scripts that were used to process and analyze the survey data we collected. *Importantly, scripts that require full survey responses will not function, as full responses are omitted from this repository to preserve participants' anonymity. This includes the `data_reader.py` and `run_all.py` scripts.* However, the scripts are included here to allow others to verify the process behind our analysis and to provide a scaffold for future surveys. The `data_reader.py` utility allows easy viewing of survey data, when present. The `run_all.py` utility incorporates the other files in the directory to fully preprocess and plot the survey data. 
+The `scripts` folder contains the scripts that were used to process and analyze the survey data we collected. *Importantly, scripts that require full survey responses will not function, as full responses are omitted from this repository to preserve participants' anonymity. This includes the `data_reader.py` and `run_all.py` scripts as well as the reconciliator.* However, the scripts are included here to allow others to verify the process behind our analysis and to provide a scaffold for future surveys. The `data_reader.py` utility allows easy viewing of survey data, when present. The `run_all.py` utility incorporates the other files in the directory to fully preprocess and plot the survey data. 
 
 #### JSON Converters
 The files in the `json_converters` subfolder are utilized by `run_all.py` to preprocess raw survey data into a readable format.
