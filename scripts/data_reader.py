@@ -19,6 +19,9 @@ def getValidQuestions(survey):
         
 def getMostRecent(survey):
     path = os.path.join(survey, "files", "*sanitized_*.json")
+    if len(glob.glob(path)) == 0:
+        print("Unable to find response data for survey '" + survey + "', exiting.")
+        exit(1)
     return glob.glob(path)[-1].split(os.sep)[-1]
 
 def getData(survey):
